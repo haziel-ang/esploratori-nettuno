@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esploratori a Nettuno — I Fatebenefratelli e i loro segreti</title>
+<meta name="description" content="Caccia al tesoro per le Giornate FAI di Primavera. Scopri i luoghi storici dei Fatebenefratelli a Nettuno con mappa interattiva e storie per giovani esploratori.">
+
+<!-- Preconnect fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="#" class="logo" aria-label="Esploratori a Nettuno">
+    <!-- SVG Logo: croce dei Fatebenefratelli stilizzata -->
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/>
+      <path d="M16 6v20M11 16h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M10 10l12 12M22 10L10 22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    </svg>
+    Esploratori a Nettuno
+  </a>
+  <button class="theme-toggle" data-theme-toggle aria-label="Cambia tema chiaro/scuro">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+</header>
+
+<main class="page-wrapper">
+
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <div class="hero-logos">
+      <img src="./assets/logo-cdp.jpeg" alt="Logo Casa Divina Provvidenza — Azienda Agricola" class="hero-logo hero-logo--cdp" width="260" height="auto">
+      <img src="./assets/logo-fai.jpeg" alt="Logo FAI — Fondo per l'Ambiente Italiano" class="hero-logo hero-logo--fai" width="72" height="auto">
+    </div>
+    <span class="badge">Giornate FAI di Primavera 2026</span>
+    <h1>I Segreti dei Fatebenefratelli a Nettuno</h1>
+    <p class="subtitle">Un frate fortissimo che toglieva i denti con le dita, cantine scavate nella roccia, suore venute dalla Spagna e una farmacia magica. Segui la mappa e scopri tutto.</p>
+  </section>
+
+  <!-- MAPPA -->
+  <section class="map-section fade-in" id="mappa">
+    <h2>La Mappa del Tesoro</h2>
+    <div id="map" role="application" aria-label="Mappa interattiva dei luoghi storici a Nettuno"></div>
+  </section>
+
+  <!-- LUOGHI -->
+  <section class="locations" id="luoghi">
+
+    <!-- 1. Ex Sanatorio / Casa Divina Provvidenza -->
+    <article class="location-card fade-in" id="luogo-1">
+      <span class="card-number">1</span>
+      <div class="card-icon" aria-hidden="true">🏥</div>
+      <h3>L'Ospedale del Frate Fortissimo</h3>
+      <p class="address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Via San Benedetto Menni (ex Via dei Frati), Nettuno
+      </p>
+      <div class="story">
+        <p>Questo edificio nacque nel <strong>1892</strong> come ospedale costruito da <strong>Fra Orsenigo</strong>, un frate che veniva dalla Brianza ed era diventato famoso in tutta Roma. Ma per cosa? Per la sua forza incredibile: ogni mattina faceva ginnastica con una clava da <strong>dieci chili</strong> e stringeva molle d'acciaio, proprio come un pugile. Era talmente forte che riusciva a togliere i denti malati usando solo le dita, in meno di <strong>tre secondi</strong>.</p>
+        <p>Nella sua vita ha tolto esattamente <strong>2.000.744 denti</strong>, tanto che ha vinto un Guinness dei Primati. Li conservava tutti in tre enormi casse di legno. E la cosa incredibile? Non chiedeva mai un soldo: curava tutti gratis, dal Papa alla Regina Margherita, fino ai più poveri.</p>
+        <p>Oggi qui si trova la <strong>Parrocchia di Santa Barbara</strong>, dove riposano le spoglie di Fra Orsenigo, e la <strong>Tenda del Perdono</strong>, la stanzetta dove nel 1902 morì la piccola <strong>Maria Goretti</strong>.</p>
+      </div>
+      <div class="curiosita">
+        <div class="curiosita-label">Lo sapevi?</div>
+        Fra Orsenigo tolse un dente a <strong>Papa Leone XIII</strong> con un gesto così rapido che nessuno dei medici presenti se ne accorse. Il Papa si accorse che il dente mancava e il frate fu obbligato a restituirlo!
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=41.456223,12.649635" target="_blank" rel="noopener noreferrer" class="navigate-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        Portami qui
+      </a>
+    </article>
+
+    <!-- 2. Cantina -->
+    <article class="location-card fade-in" id="luogo-2">
+      <span class="card-number">2</span>
+      <div class="card-icon" aria-hidden="true">🍇</div>
+      <h3>La Cantina nella Roccia</h3>
+      <p class="address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Via dei Frati 140, Nettuno
+      </p>
+      <div class="story">
+        <p>Questa azienda agricola nacque nel <strong>1821</strong> come tenuta collegata all'antico sanatorio dei Fatebenefratelli. Al piano terra nasconde un segreto: una cantina con grandi botti di legno scavata direttamente nel <strong>"macco"</strong>, una roccia speciale color giallo chiaro, friabile e porosa, tipica di questa zona del litorale laziale.</p>
+        <p>Oggi l'azienda appartiene alla <strong>famiglia Cosmi</strong>, che l'ha riportata agli antichi splendori producendo vino seguendo le tecniche tradizionali. La cantina nel macco mantiene naturalmente la temperatura ideale per far invecchiare il vino, proprio come un frigorifero scavato nella terra.</p>
+      </div>
+      <div class="curiosita">
+        <div class="curiosita-label">Lo sapevi?</div>
+        Nel 1921 l'intero complesso fu venduto allo Stato Vaticano e ribattezzato <strong>"Casa della Divina Provvidenza"</strong>. Il nome è rimasto fino ad oggi, anche per l'azienda agricola.
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=41.476555,12.682936" target="_blank" rel="noopener noreferrer" class="navigate-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        Portami qui
+      </a>
+    </article>
+
+    <!-- 3. Villa Miramare -->
+    <article class="location-card fade-in" id="luogo-3">
+      <span class="card-number">3</span>
+      <div class="card-icon" aria-hidden="true">🌊</div>
+      <h3>La Casa delle Suore Spagnole</h3>
+      <p class="address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Via Antonio Gramsci 71, Nettuno
+      </p>
+      <div class="story">
+        <p>Questa grande villa si chiama <strong>Villa Miramare</strong> e ha un accesso privato che porta direttamente sulla spiaggia. Per oltre un secolo, dal <strong>1910 al 2024</strong>, è stata la casa delle <strong>Suore Ospedaliere del Sacro Cuore di Gesù</strong>, che tutti a Nettuno chiamavano semplicemente <strong>"le spagnole"</strong>, perché il loro ordine fu fondato in Spagna nel 1881 da San Benedetto Menni.</p>
+        <p>Le suore si occupavano di curare gli anziani della città, con una dedizione incredibile: <strong>centoventiquattro anni</strong> di assistenza ininterrotta, una delle presenze più longeve d'Italia. La gestione è passata ad altri solo il 30 aprile 2024.</p>
+      </div>
+      <div class="curiosita">
+        <div class="curiosita-label">Lo sapevi?</div>
+        Le stesse suore che nel 1902 avevano tenuto la mano alla piccola Maria Goretti morente nel Sanatorio di Via dei Frati, hanno poi curato gli anziani di Nettuno per più di un secolo. Una fedeltà straordinaria a un luogo e alla sua gente.
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=41.455952,12.651249" target="_blank" rel="noopener noreferrer" class="navigate-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        Portami qui
+      </a>
+    </article>
+
+    <!-- 4. Farmacia Orsenigo -->
+    <article class="location-card fade-in" id="luogo-4">
+      <span class="card-number">4</span>
+      <div class="card-icon" aria-hidden="true">⚗️</div>
+      <h3>La Farmacia del Frate</h3>
+      <p class="address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Piazza Cavalieri di Vittorio Veneto, Nettuno
+      </p>
+      <div class="story">
+        <p>In questa piazza si trovava la <strong>Farmacia Orsenigo</strong>, la farmacia annessa al Sanatorio dove i frati preparavano medicine, sciroppi e rimedi per i pazienti dell'ospedale. Intitolata a Fra Orsenigo, è stata attiva per decenni come punto di riferimento sanitario per tutta Nettuno.</p>
+        <p>Nel <strong>2017</strong> la farmacia ha ospitato una mostra fotografica e documentaria dedicata a Fra Orsenigo, con documenti originali, fotografie d'epoca e strumenti medici dell'Ottocento.</p>
+      </div>
+      <div class="curiosita">
+        <div class="curiosita-label">Lo sapevi?</div>
+        I romani chiamavano Fra Orsenigo <strong>"er Cacciadenti auffa"</strong>: il caccia-denti gratis. La parola "auffa" viene dalla sigla <strong>A.U.F.</strong> (Ad Usum Fabricae), che si metteva sui materiali destinati alla Basilica di San Pietro che non pagavano il dazio. Da sigla doganale del Papa a soprannome di un dentista!
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=41.458313,12.655627" target="_blank" rel="noopener noreferrer" class="navigate-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        Portami qui
+      </a>
+    </article>
+
+  </section>
+
+  <!-- CRONOLOGIA -->
+  <section class="timeline-section fade-in" id="cronologia">
+    <h2>Il Filo del Tempo</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="year">1837</div>
+        <div class="event">Nasce Innocente Orsenigo a Pusiano, in Brianza. Figlio di fornai, penultimo di 12 fratelli.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">1885</div>
+        <div class="event">Don Temistocle Signori chiama i Fatebenefratelli a Nettuno per dirigere l'Ospedale dei Poveri.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">1892</div>
+        <div class="event">Inaugurazione del Sanatorio della Madonna del Buon Consiglio in Via dei Frati.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">1902</div>
+        <div class="event">Maria Goretti, 11 anni, muore nel Sanatorio. Sarà canonizzata nel 1950.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">1903</div>
+        <div class="event">Conteggio ufficiale: 2.000.744 denti estratti. Record imbattuto nel Guinness dei Primati.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">1904</div>
+        <div class="event">Fra Orsenigo muore a Nettuno a 67 anni. Le sue spoglie riposano oggi nella Parrocchia di Santa Barbara.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">1910</div>
+        <div class="event">Arrivano le Suore Ospedaliere del Sacro Cuore, "le spagnole", che resteranno per 114 anni.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">1921</div>
+        <div class="event">Il complesso viene venduto allo Stato Vaticano. Nasce la "Casa della Divina Provvidenza".</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QR CODE -->
+  <section class="qr-section fade-in" id="qr">
+    <h2>Porta la mappa con te</h2>
+    <p>Inquadra il codice con la fotocamera del telefono per aprire questa pagina durante la passeggiata.</p>
+    <div id="qrcode"></div>
+    <p class="qr-note">Il codice QR funziona solo dopo la pubblicazione online della pagina.</p>
+  </section>
+
+  <!-- CREDITI -->
+  <section class="credits fade-in">
+    <h2>Fonti e Ringraziamenti</h2>
+    <p>Contenuti storici tratti dal documento <em>"I Fatebenefratelli a Nettuno — 1885-1921"</em>, a cura della Casa Divina Provvidenza, Azienda Agricola.</p>
+    <p style="margin-top: var(--space-2);">Progetto realizzato per le <strong>Giornate FAI di Primavera</strong>.</p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logos">
+    <img src="./assets/logo-cdp.jpeg" alt="Casa Divina Provvidenza" class="footer-logo footer-logo--cdp" width="160" height="auto">
+    <img src="./assets/logo-fai.jpeg" alt="FAI" class="footer-logo footer-logo--fai" width="44" height="auto">
+  </div>
+  <p class="footer-credits">
+    Progetto ideato e realizzato da <strong>Riccardo Pau</strong> (FAI)<br>
+    per le <strong>Giornate FAI di Primavera 2026</strong><br>
+    presso la Casa Divina Provvidenza — Azienda Agricola, Nettuno
+  </p>
+  <p class="footer-copy">&copy; 2026 Riccardo Pau &mdash; Tutti i diritti riservati</p>
+  <p style="margin-top: var(--space-2);">
+    <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">
+      Created with Perplexity Computer
+    </a>
+  </p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>
