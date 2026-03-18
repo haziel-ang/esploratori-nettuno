@@ -134,8 +134,7 @@
   // ========================
   var qrEl = document.getElementById('qrcode');
   if (qrEl && typeof QRCode !== 'undefined') {
-    var pageUrl = window.location.href;
-    // Only generate a meaningful QR if URL looks like it's deployed
+    var pageUrl = 'https://haziel-ang.github.io/esploratori-nettuno/';
     new QRCode(qrEl, {
       text: pageUrl,
       width: 180,
