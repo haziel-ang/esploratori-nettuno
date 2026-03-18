@@ -130,20 +130,28 @@
   }
 
   // ========================
-  // QR CODE GENERATION
+  // VISIT COUNTER (counterapi.dev)
   // ========================
-  var qrEl = document.getElementById('qrcode');
-  if (qrEl && typeof QRCode !== 'undefined') {
-    var pageUrl = 'https://haziel-ang.github.io/esploratori-nettuno/';
-    new QRCode(qrEl, {
-      text: pageUrl,
-      width: 180,
-      height: 180,
-      colorDark: getComputedStyle(root).getPropertyValue('--color-primary').trim() || '#b8860b',
-      colorLight: getComputedStyle(root).getPropertyValue('--color-surface-2').trim() || '#ffffff',
-      correctLevel: QRCode.CorrectLevel.M
-    });
-  }
+  (function initCounter() {
+    var counterEl = document.getElementById('counter-value');
+    if (!counterEl) return;
+
+    // Use counterapi.dev REST API — free, no signup needed
+    var apiUrl = 'https://api.counterapi.dev/v1/esploratori-nettuno/visits/up';
+
+    fetch(apiUrl)
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data && typeof data.count === 'number') {
+          counterEl.textContent = data.count.toLocaleString('it-IT');
+        } else {
+          counterEl.textContent = '—';
+        }
+      })
+      .catch(function () {
+        counterEl.textContent = '—';
+      });
+  })();
 
   // ========================
   // SCROLL REVEAL (IntersectionObserver)
