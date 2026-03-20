@@ -54,7 +54,7 @@
    LIGHT MODE (default)
    Warm parchment + gold
    ======================== */
-:root, [data-theme="light"] {
+:root {
   --color-bg:             #faf7f0;
   --color-surface:        #fff9ee;
   --color-surface-2:      #ffffff;
@@ -84,65 +84,7 @@
   --shadow-lg: 0 12px 32px rgba(58, 46, 30, 0.12);
 }
 
-/* ========================
-   DARK MODE
-   ======================== */
-[data-theme="dark"] {
-  --color-bg:             #1a1710;
-  --color-surface:        #221e15;
-  --color-surface-2:      #2a251b;
-  --color-surface-offset: #1e1b14;
-  --color-divider:        #3a3328;
-  --color-border:         #4a4132;
 
-  --color-text:           #d8cdb8;
-  --color-text-muted:     #9a8e78;
-  --color-text-faint:     #6a5f4e;
-  --color-text-inverse:   #1a1710;
-
-  --color-primary:        #daa520;
-  --color-primary-hover:  #c89418;
-  --color-primary-active: #b08310;
-  --color-primary-highlight: #3a3420;
-
-  --color-accent:         #e06840;
-  --color-accent-hover:   #c85838;
-  --color-accent-active:  #b04830;
-
-  --color-success:        #6daa45;
-  --color-success-highlight: #2a3820;
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --color-bg:             #1a1710;
-    --color-surface:        #221e15;
-    --color-surface-2:      #2a251b;
-    --color-surface-offset: #1e1b14;
-    --color-divider:        #3a3328;
-    --color-border:         #4a4132;
-    --color-text:           #d8cdb8;
-    --color-text-muted:     #9a8e78;
-    --color-text-faint:     #6a5f4e;
-    --color-text-inverse:   #1a1710;
-    --color-primary:        #daa520;
-    --color-primary-hover:  #c89418;
-    --color-primary-active: #b08310;
-    --color-primary-highlight: #3a3420;
-    --color-accent:         #e06840;
-    --color-accent-hover:   #c85838;
-    --color-accent-active:  #b04830;
-    --color-success:        #6daa45;
-    --color-success-highlight: #2a3820;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
-  }
-}
 
 /* ========================
    LAYOUT
@@ -184,19 +126,7 @@
   flex-shrink: 0;
 }
 
-.theme-toggle {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-full);
-  color: var(--color-text-muted);
-}
-.theme-toggle:hover {
-  background: var(--color-surface-offset);
-  color: var(--color-text);
-}
+
 
 /* ========================
    HERO SECTION
@@ -529,10 +459,14 @@
    ======================== */
 .site-footer {
   text-align: center;
-  padding: var(--space-6) var(--space-4);
-  border-top: 1px solid var(--color-divider);
+  padding: var(--space-8) var(--space-4);
+  border-top: 3px solid var(--color-primary);
+  margin-top: var(--space-8);
   font-size: var(--text-xs);
   color: var(--color-text-faint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .site-footer a {
