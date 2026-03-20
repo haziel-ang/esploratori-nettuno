@@ -504,6 +504,17 @@
   color: var(--color-primary);
 }
 
+.credits .download-link {
+  display: inline;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-primary);
+  transition: border-color var(--transition-interactive);
+}
+
+.credits .download-link:hover {
+  border-bottom-style: solid;
+}
+
 /* ========================
    FOOTER
    ======================== */
